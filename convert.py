@@ -7,7 +7,7 @@ def convert(number):
         while len(bae)!=4:
             bae="0"+bae;
         BCD+=bae+" ";
-    return "binaire : "+prefixDel(bin(number),"0b")+" | octal : "+prefixDel(oct(number),"0o")+" | decimal : "+str(int(number))+" | hexadecimal : "+prefixDel(hex(number),"0x")+" | BCD : "+BCD;
+    return {"binaire : "+prefixDel(bin(number),"0b"), 'octal' : prefixDel(oct(number),"0o"), 'decimal':str(int(number)), "hexadecimal": prefixDel(hex(number),"0x"), "BCD": BCD}
 def BCD(number):
     finalNumber="";
     ifBCDValid=True;
